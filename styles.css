@@ -29,24 +29,75 @@ img {
   width: 5px;
   background-color: #266188;
   top: 40px;
-  bottom: 40px;
+  bottom: 20px;
   left: 50%;
 }
 
-.container {
-  padding: 10px 40px;
+/* containers  */
+
+.right {
+  padding: 20px;
   position: relative;
   background-color: #F5F5F5;
-  width: 50%;
-  /* left: 21%;
+  width: 40%;
+  left: 21%;
   top: 50px;
   margin-bottom: 30px;
-  border-radius: 5px; */
+  border-radius: 5px;
+  margin: 5px;
 }
 
-/* arrows on containers */
+.left {
+  padding: 20px;
+  position: relative;
+  background-color: #F5F5F5;
+  width: 40%;
+  left: 21%;
+  top: 50px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+/* the circles for each container */
 
 .right::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: -20px;
+  background-color: #266187;
+  top: 28px;
+  border-radius: 50%;
+}
+
+.left::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: -15px;
+  background-color: #266187;
+  top: 28px;
+  border-radius: 50%;
+}
+
+/* Move container to the left */
+
+.left {
+  left: 0;
+}
+
+/* Move container to the right */
+
+.right {
+  left: 50%;
+}
+
+/* arrows for right side containers */
+
+.right::before {
   content: "";
   right: 100%;
   top: 10%;
@@ -59,7 +110,9 @@ img {
   position: absolute;
 }
 
-.left::after {
+/*  arrows for left side containers */
+
+.left::before {
   content: "";
   left: 100%;
   top: 10%;
@@ -72,30 +125,7 @@ img {
   position: absolute;
 }
 
-/* the circles for each container */
-
-.container::before {
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: -70px;
-  background-color: #266187;
-  top: 28px;
-  border-radius: 50%;
-}
-
-.left {
-  left: 0;
-}
-
-/* Place the container to the right */
-
-.right {
-  left: 50%;
-}
-
-/* The actual content */
+/* inside the box */
 
 .content {
   background-color: #F5F5F5;
