@@ -1,0 +1,112 @@
+/* @import url('./styles/_header.css'); */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Set a background color */
+
+body {
+  /* margin: 0; */
+  font-family: Helvetica, arial, sans-serif;
+  background-color: #A9A9A9;
+}
+
+img {
+  width: 100%;
+}
+
+.timeline {
+  position: relative;
+  height: 1000px;
+}
+
+/* vertical timeline */
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  background-color: #266188;
+  top: 40px;
+  bottom: 40px;
+  left: 50%;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: #F5F5F5;
+  width: 50%;
+  /* left: 21%;
+  top: 50px;
+  margin-bottom: 30px;
+  border-radius: 5px; */
+}
+
+/* arrows on containers */
+
+.right::after {
+  content: "";
+  right: 100%;
+  top: 10%;
+  height: 0;
+  width: 0;
+  border-top: solid 10px transparent;
+  border-left: solid 10px transparent;
+  border-right: solid 10px #F5F5F5;
+  border-bottom: solid 10px transparent;
+  position: absolute;
+}
+
+.left::after {
+  content: "";
+  left: 100%;
+  top: 10%;
+  height: 0;
+  width: 0;
+  border-top: solid 10px transparent;
+  border-left: solid 10px #F5F5F5;
+  border-right: solid 10px transparent;
+  border-bottom: solid 10px transparent;
+  position: absolute;
+}
+
+/* the circles for each container */
+
+.container::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: -70px;
+  background-color: #266187;
+  top: 28px;
+  border-radius: 50%;
+}
+
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+
+.right {
+  left: 50%;
+}
+
+/* The actual content */
+
+.content {
+  background-color: #F5F5F5;
+  position: relative;
+  border-radius: 5px;
+}
+
+.button {
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  background-color: #266187
+}
