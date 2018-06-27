@@ -138,8 +138,11 @@ img {
   background-color: #266187;
 }
 
+<<<<<<< HEAD
 /* button text slowly changes to black */
 
+=======
+>>>>>>> master
 .button:hover {
   background-color: black;
 }
