@@ -18,7 +18,7 @@ img {
 
 .timeline {
   position: relative;
-  height: 1000px;
+  height: 1350px;
 }
 
 /* vertical timeline */
@@ -29,32 +29,57 @@ img {
   width: 5px;
   background-color: #266188;
   top: 40px;
-  bottom: 20px;
-  left: 50%;
+  bottom: 10px;
+  left: 20%;
+  z-index: 1;
 }
 
 /* containers  */
 
-.right {
-  padding: 20px;
+.container {
   background-color: #F5F5F5;
-  width: 40%;
-  left: 21%;
+  width: 30%;
+  right: -22%;
   top: 50px;
   margin-bottom: 30px;
   border-radius: 5px;
-  margin: 5px;
+  margin: 45px;
+  position: relative;
+  display: block;
 }
 
-.left {
+.text {
   padding: 20px;
-  background-color: #F5F5F5;
-  width: 40%;
-  left: 21%;
-  top: 50px;
-  margin-bottom: 30px;
-  border-radius: 5px;
-  margin: 5px;
+}
+
+.date_1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #FF0043;
+  display: inline-block;
+  padding: 3px;
+  color: white;
+}
+
+.date_2 {
+  position: absolute;
+  left: 0;
+  top: 0%;
+  background-color: #FF0043;
+  display: inline-block;
+  padding: 3px;
+  color: white;
+}
+
+.date_3 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #FF0043;
+  display: inline-block;
+  padding: 3px;
+  color: white;
 }
 
 .circle {
@@ -62,50 +87,32 @@ img {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: 50%;
+  left: -21%;
+  top: 8%;
   transform: translateX(-50%);
   border-radius: 33px;
+  z-index: 3;
 }
 
 .octicon {
   position: absolute;
   top: 15%;
   left: 30%;
-}
-
-/* Move container to the left */
-
-.left {}
-
-/* Move container to the right */
-
-.right {}
-
-/* arrows for right side containers */
-
-.left::before {
-  content: "";
-  left: 41%;
-  top: 10%;
-  height: 0;
-  width: 0;
-  border-top: solid 10px transparent;
-  border-left: solid 10px #F5F5F5;
-  border-right: solid 10px transparent;
-  border-bottom: solid 10px transparent;
+  color: white;
 }
 
 /*  arrows for left side containers */
 
-.right::before {
+.content::before {
+  position: absolute;
   content: "";
-  left: 100%;
-  top: 10%;
+  left: -7%;
+  top: 9%;
   height: 0;
   width: 0;
   border-top: solid 10px transparent;
   border-left: solid 10px transparent;
-  border-right: solid 10px #F5F5F5;
+  border-right: solid 10px black;
   border-bottom: solid 10px transparent;
 }
 
@@ -124,3 +131,18 @@ img {
   color: white;
   background-color: #266187
 }
+
+/* Full size  */
+
+/* @media(min-width: 768px) {
+  .con_2 {
+    background-color: red;
+  }
+  .timeline::after {
+    border-left: 5px solid #005E90;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+  } */
