@@ -170,46 +170,18 @@ blockquote>p {
     margin-left: 0;
     transform: translateX(50%);
   }
-  .timeline-event_content con_2 {
-    transform: ;
-  }
-}
-
-/* @media(min-width: 900px) {
-  .con_1 {
-    position: relative;
-    right: 84%;
-  }
   .con_2 {
-    position: relative;
-    left: 37%;
+    transform: translateX(-124%);
   }
-  .con_3 {
-    position: relative;
-    right: 84%;
-  }
-  .timeline::after {
-    content: '';
-    position: absolute;
-    width: 5px;
-    background-color: #266188;
-    top: 40px;
-    bottom: 10px;
-    left: 34%;
-    z-index: 1;
-  }
-  .circle {
-    background-color: #266188;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 26%;
-    top: 8%;
-    transform: translateX(-50%);
-    border-radius: 33px;
-    z-index: 3;
+  .con_2 .content::before {
+    border-left: solid 10px #F5F5F5;
+    border-right: solid 10px transparent;
+    transform: translateX(98%);
+    /* flips the arrow to the right side of the card */
+    left: auto;
+    right: 0;
   }
   .container {
     ;
   }
-} */
+}
