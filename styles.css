@@ -173,9 +173,12 @@ blockquote>p {
   .con_2 {
     transform: translateX(-124%);
   }
-  .con_2 content::before {
+  .con_2 .content::before {
     border-left: solid 10px #F5F5F5;
     border-right: solid 10px transparent;
     transform: translateX(98%);
+    /* flips the arrow to the right side of the card */
+    left: auto;
+    right: 0;
   }
 }
