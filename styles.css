@@ -16,34 +16,33 @@ img {
 }
 
 .timeline {
+  margin-left: 20px;
   position: relative;
-  height: 1350px;
 }
 
 /* vertical timeline */
 
-.timeline::after {
+.timeline::before {
   content: '';
   position: absolute;
   width: 5px;
   background-color: #266188;
-  top: 40px;
-  bottom: 10px;
-  left: 20%;
+  top: 0;
+  bottom: 0;
+  left: 0;
   z-index: 1;
 }
 
 /* containers  */
 
 .container {
-  background-color: #F5F5F5;
-  width: 30%;
+  /* background-color: #F5F5F5; */
+  max-width: 400px;
   right: -22%;
   top: 50px;
   margin-bottom: 30px;
   border-radius: 5px;
-  margin: 45px;
-  position: relative;
+  /* margin: 45px; */
   display: block;
 }
 
@@ -59,6 +58,7 @@ img {
   display: inline-block;
   padding: 3px;
   color: white;
+  border-radius: 1px;
 }
 
 .date_2 {
@@ -69,6 +69,7 @@ img {
   display: inline-block;
   padding: 3px;
   color: white;
+  border-radius: 1px;
 }
 
 .date_3 {
@@ -79,6 +80,7 @@ img {
   display: inline-block;
   padding: 3px;
   color: white;
+  border-radius: 1px;
 }
 
 /* circle that contains the octicon on the timeline */
@@ -87,8 +89,8 @@ img {
   background-color: #266188;
   width: 30px;
   height: 30px;
-  position: absolute;
-  left: -21%;
+  position: relative;
+  left: 2.5px;
   top: 8%;
   transform: translateX(-50%);
   border-radius: 33px;
@@ -109,7 +111,8 @@ img {
 .content::before {
   position: absolute;
   content: "";
-  left: -7%;
+  left: 0;
+  transform: translateX(-98%);
   top: 9%;
   height: 0;
   width: 0;
@@ -117,6 +120,7 @@ img {
   border-left: solid 10px transparent;
   border-right: solid 10px #F5F5F5;
   border-bottom: solid 10px transparent;
+  z-index: -1;
 }
 
 /* inside the box */
@@ -125,6 +129,16 @@ img {
   background-color: #F5F5F5;
   position: relative;
   border-radius: 5px;
+  line-height: 20px;
+}
+
+.blockquote {
+  margin-left: 20px;
+}
+
+blockquote>p {
+  border-left: solid 5px #266188;
+  padding-left: 10px;
 }
 
 /* "more" button in the container */
@@ -138,14 +152,30 @@ img {
   background-color: #266187;
 }
 
+/* button text slowly changes to black */
+
 .button:hover {
   background-color: black;
+}
+
+.timeline-event_content {
+  margin-left: 45px;
+  background-color: #fff;
 }
 
 /* Full size  */
 
 @media(min-width: 900px) {
-  /* flips containers when screen size increases */
+  .timeline {
+    margin-left: 0;
+    transform: translateX(50%);
+  }
+  .timeline-event_content con_2 {
+    transform: ;
+  }
+}
+
+/* @media(min-width: 900px) {
   .con_1 {
     position: relative;
     right: 84%;
@@ -158,18 +188,6 @@ img {
     position: relative;
     right: 84%;
   }
-  /* .con_1>content::before {
-    position: absolute;
-    content: "";
-    left: 70%;
-    top: 9%;
-    height: 0;
-    width: 0;
-    border-top: solid 10px transparent;
-    border-left: solid 10px transparent;
-    border-right: solid 10px black;
-    border-bottom: solid 10px transparent;
-  } */
   .timeline::after {
     content: '';
     position: absolute;
@@ -191,4 +209,7 @@ img {
     border-radius: 33px;
     z-index: 3;
   }
-}
+  .container {
+    ;
+  }
+} */
